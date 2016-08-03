@@ -1,0 +1,163 @@
+.header {
+  width: 95%;
+  background: #FFFFFF;
+  margin: auto auto 20px ;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 0 7px 0 #959595;
+
+  &_block {
+    display: inline-block;
+    border-left: 1px solid #e2e2e2;
+    &:first-child {
+      border: none;
+    }
+  }
+}
+
+.logo {
+  width: 110px;
+  display: inline-block;
+  margin: 0  0  0 10px;
+}
+
+.stars {
+  width: 80px;
+  display: inline-block;
+  margin: 3px  0  0 10px;
+
+  &_list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &_item {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url("/assets/img/sprite/star.png") no-repeat 0 0;
+  }
+}
+
+.logo-block, .header_add-company, .header_callback{
+  padding: 20px 30px 20px 6px;
+}
+
+.header_add-company {
+  font-size: 14px;
+  padding-left: 40px;
+
+  &_text {
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+
+      @include sprite($add);
+      top: 1px;
+      left: -25px;
+    }
+  }
+
+  &_link {
+    color: #e2001a;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header_callback {
+  @extend .header_add-company;
+}
+
+.header_add-callback_link {
+  color: #000000;
+  border-bottom: 1px dashed  #e2001a;
+  text-decoration: none;
+  padding-bottom: 2px;
+  position: relative;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+
+    @include sprite($phone-2);
+    top: 1px;
+    left: -25px;
+  }
+
+  &:hover {
+    color: #e2001a;
+    border-bottom: 1px dashed #000000;
+    text-decoration: none;
+    padding-bottom: 2px;
+  }
+}
+
+.header_number {
+  padding: 20px;
+
+  &_link {
+    font-size: 18px;
+
+    color: #000000;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.span-tell {
+  color: #e2001a;
+}
+
+.header_basket {
+  padding: 20px 30px 20px 43px;
+
+  &_text {
+  font-size: 14px;
+  position: relative;
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+
+      @include sprite($basket);
+      top: -2px;
+      left: -25px;
+    }
+  }
+}
+
+.block_vip {
+  background: linear-gradient(to bottom, #40b39f, #04977e);
+  padding: 5px 12px 5px 32px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+  position: relative;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    @include sprite($queen);
+    top: 4px;
+    left: 10px;
+  }
+}

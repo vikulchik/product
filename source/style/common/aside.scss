@@ -1,0 +1,260 @@
+.aside {
+  width: 30%;
+  background: #FFFFFF;
+  box-shadow: 0 0 7px 0 #959595;
+  float: left;
+  padding: 22px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.search-field {
+  position: relative;
+  margin-bottom: 30px;
+  &_input {
+    width: 350px;
+    border: 1px solid #00957c;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-sizing: border-box;
+    padding: 11px 20px 11px 11px;
+    font-size: 14px;
+    font-family: "PT Sans",sans-serif;
+    font-style: italic;
+    color: #959595;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_submit {
+    background: linear-gradient(to bottom, #3fb29e, #00957c);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+
+    &:hover {
+      background: #40b39f;
+    }
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+
+      @include sprite($search);
+      top: 12px;
+      left: 12px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.navigation {
+  &_list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &_item {
+    list-style-type: none;
+    border-bottom: 1px solid #e2e2e2;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &_link {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    padding: 15px 20px;
+    display: block;
+  }
+}
+
+.nav-span {
+  color: #959595;
+}
+
+.last-link {
+  padding-left: 50px;
+}
+
+.contacts {
+  padding: 20px 0;
+  font-size: 16px;
+  &_text {
+    width: 385px;
+    background: #e2001a;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: block;
+    margin-bottom: 23px;
+  }
+
+  &_company {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &_checked {
+    width: 14px;
+    height: 16px;
+    background: url("/assets/img/chek.png") no-repeat 0 0;
+    float: left;
+    margin-top: 5px;
+  }
+
+  &_name {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  &_span {
+    font-weight: normal;
+    display: block;
+  }
+
+  &_phone {
+    padding-left: 30px;
+  }
+
+  &_number {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.mail {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+
+    @include sprite($mail-2);
+    top: 5px;
+    left: -32px;
+  }
+}
+
+.skype {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+
+    @include sprite($skype);
+    top: 2px;
+    left: -32px;
+  }
+}
+
+.number {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+
+    @include sprite($phone-2);
+    top: 0;
+    left: -30px;
+  }
+}
+
+.map {
+  text-decoration: none;
+  color: #e2001a;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.work-graphic {
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  &_item {
+    list-style-type: none;
+    margin-bottom: 5px;
+  }
+}
+
+.write-me {
+  width: 220px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #99c91e, #80b200);
+  padding: 15px 40px 15px 80px;
+  color: #FFFFFF;
+  font-size: 16px;
+  margin: auto;
+  position: relative;
+  &:hover {
+    background: linear-gradient(to bottom, #c9bc1e, #ffdb2b);
+    .write-me_mail {
+      &:hover {
+        background: linear-gradient(to bottom, #626362, #707070);
+      }
+    }
+  }
+
+  &:active {
+    background: linear-gradient(to bottom, #99c91e, #80b200);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &_mail {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(to bottom, #707070, #626362);
+    position: absolute;
+    border: none;
+    top: 0;
+    left: 0;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+
+      @include sprite($mail-3);
+      top: 17px;
+      left: 16px;
+    }
+  }
+}

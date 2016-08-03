@@ -1,0 +1,26 @@
+.main-content {
+  height: 250px;
+  background: url("/assets/img/img.jpg") no-repeat  center center;
+  background-size: cover;
+  display: flex;
+  margin-bottom: 20px;
+
+  &_logo {
+    width: 300px;
+    margin: auto auto 0 auto ;
+
+    &-name {
+      font-size: 18px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 5px 60px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    &-link {
+      display: block;
+      margin: auto auto 30px auto;
+      width: 121px;
+    }
+  }
+}

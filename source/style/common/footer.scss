@@ -1,0 +1,52 @@
+.footer {
+  width: 95%;
+  background: #FFFFFF;
+  margin: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0 0 7px 0 #959595;
+  min-height: 40px;
+  padding: 23px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+
+    @include sprite($button);
+    top: 35px;
+    right: 25px;
+  }
+
+  &_copyright {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  &_list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &_item {
+    display: inline-block;
+    border-left: 1px solid #201c14;
+    margin-left: 10px;
+    padding-left: 10px;
+
+    &:first-child {
+      border: none;
+      margin: 0;
+      padding-left: 0;
+    }
+  }
+
+  &_link {
+    color: #e2001a;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

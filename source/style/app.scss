@@ -1,0 +1,33 @@
+@import "sprite";
+
+body {
+  margin: 0;
+  background: url("/assets/img/bg-img.jpg") repeat-y 0 0;
+  height: 100%;
+  min-width: 100%;
+  font-family: "PT Sans",sans-serif;
+
+}
+
+.clearfix {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+@import 'common/header';
+@import 'common/main-content';
+@import 'common/aside';
+@import 'common/footer';

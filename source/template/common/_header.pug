@@ -1,0 +1,23 @@
+header.header
+      .header_block
+              .logo-block.clearfix
+                    a(href='#').logo
+                        img(src="/assets/img/logo.png" alt="logo").logo_img
+                    .block_vip vip
+                    .stars
+                        ul.stars_list
+                            - for (var x = 0; x < 5; x++)
+                              li.stars_item
+      .header_block
+            .header_add-company
+                .header_add-company_text Добавить компанию на
+                a(href="#").header_add-company_link Zakupka.com
+      .header_block
+            .header_callback
+                a(href="#").header_add-callback_link Заказать обратный звонок
+      .header_block
+            .header_number
+                a(href="tel:+380675652728").header_number_link +38 <span class="span-tell">(067)</span> 565-27-28
+      .header_block
+            .header_basket
+                 .header_basket_text В корзине 0 товаров
