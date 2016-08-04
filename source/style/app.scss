@@ -22,7 +22,7 @@ body {
   }
 }
 
-.container {
+.wrapper {
   width: 95%;
   margin: auto;
 }
@@ -31,3 +31,4 @@ body {
 @import 'common/main-content';
 @import 'common/aside';
 @import 'common/footer';
+@import 'common/container';
