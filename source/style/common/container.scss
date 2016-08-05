@@ -2,14 +2,22 @@
   float: right;
   width: 70%;
 
+  @media screen and (max-width: 768px){
+    float: none;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
   &_navigation {
-    min-height: 40px;
     background: #FFFFFF;
     box-shadow: 0 0 7px 0 #959595;
     padding: 6px 22px;
     border-radius: 5px;
     margin-bottom: 20px;
     box-sizing: border-box;
+    @media screen and (max-width: 1024px){
+      text-align: center;
+    }
   }
 
   &_products {
@@ -25,6 +33,9 @@
   margin: 5px 0 0 0;
   padding: 0;
   float: left;
+  @media screen and (max-width: 425px){
+    float: none;
+  }
 }
 
 .container_navigation-item {
@@ -32,6 +43,18 @@
   display: inline-block;
   margin-left: 40px;
   position: relative;
+
+
+  @media screen and (max-width: 1024px){
+    margin-left: 25px;
+  }
+
+  @media screen and (max-width: 425px){
+    margin-left: 0;
+    display: block;
+    position: static;
+    margin-bottom: 10px;
+  }
 
   &:after {
     position: absolute;
@@ -41,6 +64,12 @@
     @include sprite($arrow);
     top: -10px;
     right: -28px;
+    @media screen and (max-width: 1024px){
+      right: -18px;
+    }
+    @media screen and (max-width: 1024px){
+      top: -99999px;
+    }
   }
 
   &:first-child {
@@ -66,6 +95,9 @@
   float: right;
    width: 135px!important;
    text-align: right!important;
+   @media screen and (max-width: 425px){
+     float: none;
+   }
 }
 
 .select2-selection__rendered {
@@ -100,15 +132,28 @@
 .container_products-slider {
   float: left;
   width: 35%;
-  height: 445px;
   border: 1px solid #e2e2e2;
   padding: 10px;
+  margin-bottom: 15px;
+
+  @media screen and (max-width: 1024px){
+    float: none;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 425px){
+    width: 95%;
+  }
 }
 
 .container_products-info {
   float: right;
   width: 60%;
   min-height: 445px;
+  @media screen and (max-width: 1024px){
+    float: none;
+    width: 100%;
+  }
 }
 
 .slider {
@@ -243,6 +288,12 @@
   border-left: 1px dashed #acacac;
   border-right: 1px dashed #acacac;
   text-align: center;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 425px){
+    float: none;
+    width: 100%;
+  }
 
   &_price {
     display: block;
@@ -257,6 +308,7 @@
   width: 175px;
   padding: 15px 2px 15px 44px;
   margin-bottom: 20px;
+  display: block;
 }
 
 .order-products_callme {
@@ -265,7 +317,7 @@
   font-size: 14px;
   position: relative;
   margin: 0 0 20px 10px;
-  display: block;
+  display: inline-block;
 
   &:after {
     content: '';
@@ -274,7 +326,7 @@
 
     @include sprite($phone);
     top: 0;
-    left: 10px;
+    left: -24px;
   }
 
   &:hover {
@@ -283,9 +335,9 @@
 }
 
 .order-products_delivery {
-  display: block;
+  display: inline-block;
   font-size: 14px;
-  margin: 0 0 25px  30px;
+  margin: 0 0 60px  30px;
   position: relative;
 
   &:after {
@@ -295,7 +347,7 @@
 
     @include sprite($car);
     top: 0;
-    left: -12px;
+    left: -25px;
   }
 }
 
@@ -324,10 +376,11 @@
 }
 
 .order-products_like {
-  display: block;
+  display: inline-block;
   font-size: 10px;
   color: #acacac;
   position: relative;
+  margin-bottom: 25px;
 
   &:after {
     content: '';
@@ -336,14 +389,65 @@
 
     @include sprite($like);
     top: -4px;
-    right: 35px;
+    right: -28px;
   }
+}
+
+.share {
+  &_list {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  &_item {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 5px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+
+  &_link {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+
+  &_span {
+    display: inline-block;
+    font-size: 10px;
+    color: #acacac;
+  }
+}
+
+.share_link-vk {
+  background: url("/assets/img/vk.png") no-repeat 0 0;
+}
+
+.share_link-tw {
+  background: url("/assets/img/tw.png") no-repeat 0 0;
+}
+
+.share_link-fb {
+  background: url("/assets/img/fb.png") no-repeat 0 0;
+}
+
+.share_link-google {
+  background: url("/assets/img/google.png") no-repeat 0 0;
 }
 
 .order-info {
   float: right;
   width: 58%;
   text-align: center;
+  margin-bottom: 18px;
+
+  @media screen and (max-width: 425px){
+    float: none;
+    width: 100%;
+  }
 
   &_payment {
     padding: 15px;
@@ -370,10 +474,18 @@
 .order-info_item {
   list-style-type: none;
   display: inline-block;
+
+  @media screen and (max-width: 425px){
+    display: block;
+  }
 }
 
 .order-info_contacts {
   @extend .order-info_payment;
+  border-bottom: 1px solid #e2e2e2;
+  border-bottom-left-radius: 0 ;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
 }
 
 .order-info_phone {
@@ -393,4 +505,95 @@
     top: 0;
     left: -26px;
   }
+}
+
+.order-info_button {
+  display: block;
+  text-decoration: none;
+  color: #80b200;
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 1px dashed #e2e2e2;
+  border-right: 1px dashed #e2e2e2;
+  border-left: 1px dashed #e2e2e2;
+  border-bottom-left-radius: 11px ;
+  border-bottom-right-radius: 11px;
+  background: #f6f6f6;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    @include sprite($mail);
+    top: 11px;
+    left: 78px;
+  }
+}
+
+.container_nav {
+  padding: 20px;
+  border-top: 1px dashed #e2e2e2;
+  border-bottom: 1px dashed #e2e2e2;
+  margin-bottom: 10px;
+  &-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 10px;
+    border-left: 1px solid #e2e2e2;
+    padding-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    @media screen and (max-width: 425px){
+      display: block;
+      margin-left: 0;
+      border-left: 0;
+      padding-left: 0;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &-link {
+    color: #e2001a;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px dashed  #e2001a;
+    display: block;
+    &:hover {
+      color: #000000;
+      border-bottom: 1px dashed  #000;
+    }
+  }
+}
+
+.container_system {
+  padding: 10px;
+  border: 1px dashed #80b200;
+  border-radius: 11px;
+  font-size: 14px;
+  text-align: center;
+  background: #f9feee;
+  color: #80b200;
+}
+
+.system_span  {
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid #80b200;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
 }

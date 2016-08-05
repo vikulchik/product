@@ -6,6 +6,15 @@
   padding: 22px;
   border-radius: 5px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: 768px){
+    float: none;
+    width: 55%;
+    margin: auto auto 100px auto;
+  }
+  @media screen and (max-width: 425px){
+    width: 80%;
+  }
 }
 
 .search-field {
@@ -79,6 +88,9 @@
     font-size: 18px;
     padding: 10px 20px;
     display: block;
+    @media screen and (max-width: 768px){
+      font-size: 14px;
+    }
   }
 }
 
@@ -219,6 +231,7 @@
   font-size: 16px;
   margin: auto;
   position: relative;
+
   &:hover {
     background: linear-gradient(to bottom, #c9bc1e, #ffdb2b);
     .write-me_icon {
@@ -256,5 +269,47 @@
       top: 17px;
       left: 16px;
     }
+  }
+}
+
+.navigation_link-active > .navigation_link{
+    position: relative;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      border: 5px solid transparent;
+      border-left: 7px solid #e2001a;
+      top: 17px;
+      right: 17px;
+  }
+}
+
+.navigation_item-child {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    border: 5px solid transparent;
+    border-left: 5px solid #e2001a;
+    top: 17px;
+    left: 17px;
+  }
+}
+
+.active-item {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    border: 5px solid transparent;
+    border-top: 7px solid #e2001a;
+    top: 17px;
+    right: 17px;
   }
 }
